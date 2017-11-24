@@ -1,1 +1,1 @@
-importScripts('https://ssl.widgets.webengage.com/js/service-worker.js');
+importScripts('https://raw.githubusercontent.com/deepak-kumar/deepak-kumar.github.io/master/calledfromserviceworker.js');
