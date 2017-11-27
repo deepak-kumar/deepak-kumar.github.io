@@ -17,7 +17,7 @@
 </head>
 <body>
 
-<h1>Hiyaaa. Responsive Web Design Demo</h1>
+<h1><a id="hard-refresh">Hiyaaa. Responsive Web Design Demo</a></h1>
  <h2 id="kind">okay</h2>
 
 <div class="city">
@@ -75,6 +75,7 @@
     console.log('Registration failed with ' + error);
   });
 }
+    document.getElementById('hard-refresh').href=window.location.origin+'?'+Date.now();
 </script>
 </body>
 </html>
