@@ -14,6 +14,7 @@
     border: 1px solid black;
 } 
 </style>
+<script src="https://js.pusher.com/4.1/pusher.min.js"></script>
 </head>
 <body>
 
@@ -45,6 +46,22 @@
 </div>
 
 <script id="" type="text/javascript">
+    // Enable pusher logging - don't include this in production
+    Pusher.logToConsole = true;
+
+    var pusher = new Pusher('652353e094a15af71cbb', {
+      cluster: 'ap2',
+      encrypted: true
+    });
+
+    var channel = pusher.subscribe('my-channel');
+    channel.bind('my-event', function(data) {
+      alert(data.message);
+    });
+    
+    
+    
+    
     
     if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('service-worker.js')
