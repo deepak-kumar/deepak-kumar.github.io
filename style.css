@@ -109,6 +109,20 @@ h2 {
     margin-bottom: 8px;
 }
 
+/* Specific styling for Mobicules Technologies section */
+.experience-mobicules {
+    background: #E84545;
+    color: #ffffff;
+}
+
+.experience-mobicules h3 {
+    color: #ffffff;
+}
+
+.experience-mobicules ul {
+    color: #ffffff;
+}
+
 /* Hover Effects */
 .experience-item:hover {
     transform: translateY(-5px);
