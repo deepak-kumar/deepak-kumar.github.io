@@ -10,6 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 /* Container Styles */
@@ -20,6 +21,9 @@ body {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     padding: 20px 40px;
     margin: 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease-out forwards;
 }
 
 /* Header Styles */
@@ -28,18 +32,23 @@ header {
     padding-bottom: 20px;
     border-bottom: 3px solid #0072ff;
     margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInDown 1.2s ease-out forwards;
 }
 
 header h1 {
     margin: 0;
     font-size: 2.5em;
     color: #0072ff;
+    transition: color 0.3s ease;
 }
 
 header p {
     font-size: 1.2em;
     margin: 5px 0;
     color: #555;
+    transition: color 0.3s ease;
 }
 
 header a {
@@ -56,6 +65,10 @@ header a:hover {
 /* Section Styles */
 section {
     margin-bottom: 20px;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: fadeInLeft 1s ease-out forwards;
+    animation-delay: 0.3s;
 }
 
 h2 {
@@ -64,12 +77,14 @@ h2 {
     margin-bottom: 10px;
     border-left: 5px solid #0072ff;
     padding-left: 15px;
+    transition: color 0.3s ease;
 }
 
 h3 {
     font-size: 1.4em;
     color: #333;
     margin-top: 20px;
+    transition: color 0.3s ease;
 }
 
 p, ul {
@@ -85,6 +100,29 @@ ul {
 
 ul li {
     margin-bottom: 10px;
+}
+
+/* Hover Effects */
+h2:hover, h3:hover {
+    color: #005bb5;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 3px solid #0072ff;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.5s ease-out forwards;
+    animation-delay: 0.6s;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+    color: #777;
 }
 
 /* Responsive Grid */
@@ -112,20 +150,6 @@ ul li {
     }
 }
 
-/* Footer Styles */
-footer {
-    text-align: center;
-    padding-top: 20px;
-    margin-top: 20px;
-    border-top: 3px solid #0072ff;
-}
-
-footer p {
-    margin: 0;
-    font-size: 1em;
-    color: #777;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
@@ -150,5 +174,39 @@ footer p {
 
     p, ul {
         font-size: 1em;
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
