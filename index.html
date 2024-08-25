@@ -1,378 +1,511 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deepak Kumar - Resume</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
-    <style>
-        /* Global Styles */
-        body {
-            font-family: 'Open Sans', sans-serif;
-            background: linear-gradient(135deg, rgba(33, 150, 243, 0.9) 0%, rgba(33, 203, 243, 0.8) 50%, rgba(33, 243, 206, 0.9) 100%),
-            url('https://source.unsplash.com/1600x900/?minimalist,texture') no-repeat center center fixed;
-            background-size: cover;
-            color: #ffffff;
-            margin: 0;
-            padding: 20px;
-            line-height: 1.6;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deepak Kumar - Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(135deg, #f4f4f9, #c6e2ff);
+      color: #333;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
 
-        .container {
-            max-width: 900px;
-            background-color: #fff;
-            margin: 0 auto;
-            padding: 20px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-            border-radius: 8px;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.1s ease, transform 0.1s ease;
-        }
 
-        h1, h2, h3 {
-            font-family: 'Montserrat', sans-serif;
-            color: #333;
-        }
+    .container {
+      max-width: 900px;
+      background-color: #ffffff;
+      margin: 0 auto;
+      padding: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
 
-        h1 {
-            font-size: 2.5em;
-            text-align: center;
-            margin-bottom: 10px;
-            color: #2c3e50;
-            opacity: 0;
-            transform: translateY(-20px);
-            transition: opacity 0.1s ease 0.1s, transform 0.1s ease 0.1s;
-        }
+    h1,
+    h2,
+    h3 {
+      font-family: 'Montserrat', sans-serif;
+      color: #2c3e50;
+    }
 
-        h2 {
-            font-size: 1.8em;
-            border-left: 5px solid;
-            padding-left: 10px;
-            margin-bottom: 20px;
-            position: relative;
-            opacity: 0;
-            transform: translateX(-20px);
-            transition: opacity 0.1s ease 0.8s, transform 0.1s ease 0.8s;
-        }
+    h1 {
+      font-size: 2.5em;
+      text-align: center;
+      margin-bottom: 10px;
+      opacity: 0;
+      transform: translateY(-20px);
+      transition: opacity 0.6s ease 0.6s, transform 0.6s ease 0.6s;
+    }
 
-        h3 {
-            font-size: 1.4em;
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
+    h2 {
+      font-size: 1.8em;
+      border-left: 5px solid #3498db;
+      padding-left: 15px;
+      margin-bottom: 20px;
+      position: relative;
+      opacity: 0;
+      transform: translateX(-20px);
+      transition: opacity 0.6s ease 0.9s, transform 0.6s ease 0.9s;
+    }
 
-        p, li {
-            font-size: 1em;
-            color: #333;
-            position: relative;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.1s ease 0.1s, transform 0.1s ease 0.1s;
-        }
+    h3 {
+      font-size: 1.4em;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      color: #2980b9;
+    }
 
-        ul {
-            margin: 0;
-            padding: 0;
-            list-style-type: none;
-        }
+    p,
+    li {
+      font-size: 1em;
+      color: #555;
+      position: relative;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease 0.6s, transform 0.6s ease 0.6s;
+    }
 
-        ul li {
-            margin-bottom: 10px;
-            padding-left: 20px;
-            position: relative;
-        }
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
 
-        ul li:before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            font-size: 1.2em;
-            line-height: 1.2em;
-            opacity: 0;
-            transform: scale(0);
-            transition: opacity 0.1s ease 0.6s, transform 0.1s ease 0.6s;
-        }
+    ul li {
+      margin-bottom: 10px;
+      padding-left: 20px;
+      position: relative;
+    }
 
-        .contact-info {
-            text-align: center;
-            margin-bottom: 30px;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.1s ease 0.6s, transform 0.1s ease 0.6s;
-        }
+    ul li:before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      font-size: 1.2em;
+      color: #2980b9;
+    }
 
-        .contact-info a {
-            color: #2980b9;
-            text-decoration: none;
-            margin: 0 10px;
-        }
+    .contact-info {
+      text-align: center;
+      margin-bottom: 30px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease 0.9s, transform 0.6s ease 0.9s;
+    }
 
-        .contact-info a:hover {
-            color: #34495e;
-        }
+    .contact-info a {
+      color: #3498db;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 1.1em;
+      transition: color 0.3s ease;
+    }
 
-        .experience-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-        }
+    .contact-info a:hover {
+      color: #2980b9;
+    }
 
-        @media (min-width: 768px) {
-            .experience-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
+    .contact-info i {
+      margin-right: 5px;
+    }
 
-        .experience-item {
-            background-color: #ecf0f1;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.1s ease 0.6s, transform 0.1s ease 0.6s;
-        }
+    .experience-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
 
-        .experience-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
+    @media (min-width: 768px) {
+      .experience-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
 
-        /* Section-Specific Styles */
-        .summary {
-            background-color: #e3f2fd; /* Light Blue */
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 5px solid #2196f3; /* Blue */
-        }
+    .experience-item {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease 0.9s, transform 0.6s ease 0.9s;
+    }
 
-        .summary h2 {
-            color: #2196f3;
-            border-color: #2196f3;
-        }
+    .experience-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
 
-        .summary ul li:before {
-            color: #2196f3;
-        }
+    /* Section-Specific Styles */
+    .summary {
+      background-color: #ecf7ff;
+      padding: 15px;
+      border-radius: 8px;
+      border-left: 5px solid #3498db;
+    }
 
-        .experience {
-            background-color: #fbe9e7; /* Light Coral */
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 5px solid #e74c3c; /* Coral */
-        }
+    .summary h2 {
+      color: #3498db;
+    }
 
-        .experience h2 {
-            color: #e74c3c;
-            border-color: #e74c3c;
-        }
+    .experience {
+      background-color: #fef6f5;
+      padding: 15px;
+      border-radius: 8px;
+      border-left: 5px solid #e74c3c;
+    }
 
-        .experience ul li:before {
-            color: #e74c3c;
-        }
+    .experience h2 {
+      color: #e74c3c;
+    }
 
-        .work-experience {
-            background-color: #f1f8e9; /* Light Green */
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 5px solid #27ae60; /* Green */
-        }
+    .work-experience {
+      background-color: #f1f8e9;
+      padding: 15px;
+      border-radius: 8px;
+      border-left: 5px solid #27ae60;
+    }
 
-        .work-experience h2 {
-            color: #27ae60;
-            border-color: #27ae60;
-        }
+    .work-experience h2 {
+      color: #27ae60;
+    }
 
-        .work-experience ul li:before {
-            color: #27ae60;
-        }
+    .education {
+      background-color: #f5f5f5;
+      padding: 15px;
+      border-radius: 8px;
+      border-left: 5px solid #7f8c8d;
+    }
 
-        .education {
-            background-color: #f5f5f5; /* Light Grey */
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 5px solid #7f8c8d; /* Grey */
-        }
+    .education h2 {
+      color: #7f8c8d;
+    }
 
-        .education h2 {
-            color: #7f8c8d;
-            border-color: #7f8c8d;
-        }
-
-        .education p {
-            color: #333;
-        }
-    </style>
+    .education p {
+      color: #555;
+    }
+  </style>
 </head>
+
 <body>
-    <div class="container">
-        <header>
-            <h1>Deepak Kumar</h1>
-            <p class="contact-info">
-                <a href="mailto:deepakkumar222@gmail.com">deepakkumar222@gmail.com</a> |
-                <a href="tel:+919958267377">+91 99582 67377</a>
-            </p>
-        </header>
+  <div class="container">
+    <header>
+      <h1>Deepak Kumar</h1>
+      <p class="contact-info">
+        <a href="mailto:deepakkumar222@gmail.com"><i class="fas fa-envelope"></i>deepakkumar222@gmail.com</a> |
+        <a href="tel:+919958267377"><i class="fas fa-phone"></i>+91 99582 67377</a>
+      </p>
+    </header>
 
-        <section class="summary">
-            <h2>Objective</h2>
-            <p>To work earnestly, confidently, and honestly to achieve my desired target of Quality in the field of IT by being part of an organization that provides a conducive environment and adds value to the organization.</p>
-        </section>
+    <section class="summary">
+      <h2>Objective</h2>
+      <p>To work earnestly, confidently, and honestly to achieve my desired target of Quality in the field of IT by
+        being part of an organization that provides a conducive environment and adds value to the organization.</p>
+    </section>
 
-        <section class="experience">
-            <h2>Summary of Experience</h2>
-            <ul>
-                <li>Deep experience of ~13.5 years in building products from ground up (E-Commerce, Employment, Travel & Telecom B2B solution domain)</li>
-                <li>Unique ability to marry business requirements with Product management & Engineering, QA, Operations & Support team</li>
-                <li>Responsible for feature impact analysis and CEO metrics in defined areas of engineering</li>
-                <li>Expertise in creating and delivering product roadmap in short timelines</li>
-                <li>Liaison with QA teams to push for product release.</li>
-                <li>Delivery management - from concept to implementation to deployment</li>
-                <li>Liaison with Product Management to convert requirements into actionable items for the engineering team</li>
-                <li>Work with management to architect the best possible solutions for development, deployment & process automation</li>
-                <li>Responsible for Production system health, monitoring & fire fighting</li>
-                <li>Implemented multiple distributed large-scale automated software systems using MVC frameworks like Java, Spring boot, AWS Cloud, Python, Cassandra, Kafka, Aerospike, Memcache, Redis, MySQL, MongoDB, ROR, etc.</li>
-                <li>System monitoring architecture, APM using NodeJS & other 3rd party tools</li>
-                <li>Working knowledge of native app (iOS/Android) development ecosystem</li>
-                <li>Technologies: Java, Spring Boot, Python, PHP, ROR, Aerospike, Cassandra, Kafka, Elastic Search, Memcache, Redis, MySQL, MongoDB, NoSQL, HTML5, CSS3, Varnish, ROR, Capistrano, Ansible, Nginx, Apache, Node.js</li>
-            </ul>
-        </section>
+    <section class="experience">
+      <h2>Summary of Experience</h2>
+      <ul>
+        <li>Deep experience of ~13.5 years in building products from ground up (E-Commerce, Employment, Travel & Telecom
+          B2B solution domain)</li>
+        <li>Unique ability to marry business requirements with Product management & Engineering, QA, Operations &
+          Support team</li>
+        <li>Responsible for feature impact analysis and CEO metrics in defined areas of engineering</li>
+        <li>Expertise in creating and delivering product roadmap in short timelines</li>
+        <li>Liaison with QA teams to push for product release.</li>
+        <li>Delivery management - from concept to implementation to deployment</li>
+        <li>Liaison with Product Management to convert requirements into actionable items for the engineering team</li>
+        <li>Work with management to architect the best possible solutions for development, deployment & process
+          automation</li>
+        <li>Responsible for Production system health, monitoring & fire fighting</li>
+        <li>Implemented multiple distributed large-scale automated software systems using MVC frameworks like Java,
+          Spring boot, AWS Cloud, Python, Cassandra, Kafka, Aerospike, Memcache, Redis, MySQL, MongoDB, ROR, etc.</li>
+        <li>System monitoring architecture, APM using NodeJS & other 3rd party tools</li>
+        <li>Working knowledge of native app (iOS/Android) development ecosystem</li>
+        <li>Technologies: Java, Spring Boot, Python, PHP, ROR, Aerospike, Cassandra, Kafka, Elastic Search, Memcache,
+          Redis, MySQL, MongoDB, NoSQL, HTML5, CSS3, Varnish, ROR, Capistrano, Ansible, Nginx, Apache, Node.js</li>
+      </ul>
+    </section>
 
-        <section class="work-experience">
-            <h2>Work Experience</h2>
-            <div class="experience-grid">
-                <div class="experience-item">
-                    <h3>Amazon (India) Private Limited</h3>
-                    <p><strong>Software Development Manager III</strong> | September 2020 - Present</p>
-                    <ul>
-                        <li>Heading a team of 20+ SDEs, including 2 SDMs, senior engineers of Amazon Pay(HFC). Leading team to make design/architecture decisions for new ventures.</li>
-                        <li>Responsible for Business-critical RBI compliance project for payment data localization cutting across 5 orgs and 60 SDEs. Responsible for ~40% of amazon.in traffic</li>
-                        <li>End to end responsibility of high-frequency categories like Bill Payments and Recharges across telco, electricity, LPG, education, Credit cards, Digital Gold, Metro, Fastag, etc.</li>
-                        <li>Created & executed strategy to minimize high & low sev issues to 0.3/1.5 issues per SDE/month</li>
-                        <li>Running program management for 4+ tracks with 2 SDMs</li>
-                    </ul>
-                </div>
+    <section class="work-experience">
+      <h2>Work Experience</h2>
+      <div class="experience-grid">
+        <div class="experience-item">
+          <h3>Amazon (India) Private Limited</h3>
+          <p><strong>Software Development Manager III</strong> | September 2020 - Present</p>
+          <ul>
+            <li>Heading a team of 20+ SDEs, including 2 SDMs, senior engineers of Amazon Pay(HFC). Leading team to make
+              design/architecture decisions for new ventures.</li>
+            <li>Responsible for Business-critical RBI compliance project for payment data localization cutting across 5
+              orgs and 60 SDEs. Responsible for ~40% of amazon.in traffic</li>
+            <li>End to end responsibility of high-frequency categories like Bill Payments and Recharges across telco,
+              electricity, LPG, education, Credit cards, Digital Gold, Metro, Fastag, etc.</li>
+            <li>Created & executed strategy to minimize high & low sev issues to 0.3/1.5 issues per SDE/month</li>
+            <li>Running program management for 4+ tracks with 2 SDMs</li>
+          </ul>
+        </div>
 
-                <div class="experience-item">
-                    <h3>Infoedge Pvt. Ltd. (Naukri.com)</h3>
-                    <p><strong>Senior Engineering Manager</strong> | December 2017 - August 2020</p>
-                    <ul>
-                        <li>Leading a team of 13 top engineers including Tech Leads of naukri.com jobseeker side and FastForward business (resume.naukri.com with last year’s revenue of ~80+cr)</li>
-                        <li>Responsible for system design and overall architecture and ensure that all pieces fit in well without any hiccups</li>
-                        <li>Responsible for ensuring that system can handle peak traffic of as high as 30K TPS</li>
-                        <li>Act as make-shift data scientist to contribute to data lake project and ensuring that data is ingested from all required sources</li>
-                        <li>Responsible for complete jobseeker system design of naukri.com</li>
-                    </ul>
-                </div>
+        <div class="experience-item">
+          <h3>Infoedge Pvt. Ltd. (Naukri.com)</h3>
+          <p><strong>Senior Engineering Manager</strong> | December 2017 - August 2020</p>
+          <ul>
+            <li>Leading a team of 13 top engineers including Tech Leads of naukri.com jobseeker side and FastForward
+              business (resume.naukri.com with last year’s revenue of ~80+cr)</li>
+            <li>Responsible for system design and overall architecture and ensure that all pieces fit in well without
+              any hiccups</li>
+            <li>Responsible for ensuring that system can handle peak traffic of as high as 30K TPS</li>
+            <li>Act as make-shift data scientist to contribute to data lake project and ensuring that data is ingested
+              from all required sources</li>
+            <li>Responsible for complete jobseeker system design of naukri.com</li>
+          </ul>
+        </div>
 
-                <div class="experience-item">
-                    <h3>Value First Digital Media Pvt. Ltd, Gurgaon, India</h3>
-                    <p><strong>Engineering Manager</strong> | November 2015 – November 2017</p>
-                    <ul>
-                        <li>Leading a team of 10 engineers & QA developing very high value telecom product using Spring boot, Laravel, Apache Kafka for our SMS, Mail & Voice</li>
-                        <li>Actively involved in making Strategic & Technology decisions and helping the product scale to handle approx 2.5Bn SMS Messages (Excluding Email & Voice)</li>
-                        <li>Very active in the coding process and implementing core business logic</li>
-                        <li>Expertise in maintaining and scaling legacy systems</li>
-                        <li>Ensuring timely delivery of features and production issues</li>
-                        <li>Scale legacy database architectures to handle very high volumes of read & write</li>
-                    </ul>
-                </div>
+        <div class="experience-item">
+          <h3>Value First Digital Media Pvt. Ltd, Gurgaon, India</h3>
+          <p><strong>Engineering Manager</strong> | November 2015 – November 2017</p>
+          <ul>
+            <li>Leading a team of 10 engineers & QA developing very high value telecom product using Spring boot,
+              Laravel, Apache Kafka for our SMS, Mail & Voice</li>
+            <li>Actively involved in making Strategic & Technology decisions and helping the product scale to handle
+              approx 2.5Bn SMS Messages (Excluding Email & Voice)</li>
+            <li>Very active in the coding process and implementing core business logic</li>
+            <li>Expertise in maintaining and scaling legacy systems</li>
+            <li>Ensuring timely delivery of features and production issues</li>
+            <li>Scale legacy database architectures to handle very high volumes of read & write</li>
+          </ul>
+        </div>
 
-                <div class="experience-item">
-                    <h3>Ibibo Group Pvt. Ltd, Gurgaon, India</h3>
-                    <p><strong>Team Lead</strong> | March 2014 - October 2015</p>
-                    <ul>
-                        <li>Mentor & Lead a team of 8+ developers working on feature development using PHP, ROR, HTML5, CSS3 & MVC frameworks for our Services/E-Commerce Platform</li>
-                        <li>Actively participating in developing/automating complex processes to improve performance and scale the system</li>
-                        <li>Responsible for designing and developing highly scalable architecture for nikoot.com</li>
-                        <li>Architect and develop SOA based E-Commerce platform generating 1cr revenue daily</li>
-                        <li>Build centralized caching strategy/layer using Memcache, Redis etc. running on 50+ Servers</li>
-                        <li>Key member in disaster recovery planning and fire fighting</li>
-                    </ul>
-                </div>
+        <div class="experience-item">
+          <h3>Ibibo Group Pvt. Ltd, Gurgaon, India</h3>
+          <p><strong>Team Lead</strong> | March 2014 - October 2015</p>
+          <ul>
+            <li>Mentor & Lead a team of 8+ developers working on feature development using PHP, ROR, HTML5, CSS3 & MVC
+              frameworks for our Services/E-Commerce Platform</li>
+            <li>Actively participating in developing/automating complex processes to improve performance and scale the
+              system</li>
+            <li>Responsible for designing and developing highly scalable architecture for nikoot.com</li>
+            <li>Architect and develop SOA based E-Commerce platform generating 1cr revenue daily</li>
+            <li>Build centralized caching strategy/layer using Memcache, Redis etc. running on 50+ Servers</li>
+            <li>Key member in disaster recovery planning and fire fighting</li>
+          </ul>
+        </div>
 
-                <div class="experience-item">
-                    <h3>Bubbleideas Semantic Inc, Noida</h3>
-                    <p><strong>Tech Lead</strong> | January 2012 – February 2014</p>
-                    <ul>
-                        <li>Lead a team of 6 developers</li>
-                        <li>One of the initial team members of SVG based letter writing system</li>
-                        <li>Implemented bubbleideas.com from scratch in ROR (now bubbl.in)</li>
-                        <li>Developed frontend using HTML5, CSS3, JavaScript having scribbling functionality on HTML5 canvas</li>
-                        <li>Implemented reporting and admin modules for the application</li>
-                        <li>Setup the entire app ecosystem for High Availability and Scalability</li>
-                        <li>Automated deployment process and auto failover of servers & implemented session replication</li>
-                    </ul>
-                </div>
+        <div class="experience-item">
+          <h3>Bubbleideas Semantic Inc, Noida</h3>
+          <p><strong>Tech Lead</strong> | January 2012 – February 2014</p>
+          <ul>
+            <li>Lead a team of 6 developers</li>
+            <li>One of the initial team members of SVG based letter writing system</li>
+            <li>Implemented bubbleideas.com from scratch in ROR (now bubbl.in)</li>
+            <li>Developed frontend using HTML5, CSS3, JavaScript having scribbling functionality on HTML5 canvas</li>
+            <li>Implemented reporting and admin modules for the application</li>
+            <li>Setup the entire app ecosystem for High Availability and Scalability</li>
+            <li>Automated deployment process and auto failover of servers & implemented session replication</li>
+          </ul>
+        </div>
 
-                <div class="experience-item">
-                    <h3>Mobicules Technologies Ltd, Noida</h3>
-                    <p><strong>Senior Software Engineer (Symfony)</strong> | October 2010 – December 2011</p>
-                    <ul>
-                        <li>Developed job recommendation engine for Adobe Systems - Facebook Application</li>
-                        <li>Responsible for client interaction and requirement gathering</li>
-                        <li>Wrote a content parser for Adobe Systems to parse the jobs posted on taleo.com and suggest them on Adobe FB pages</li>
-                    </ul>
-                </div>
+        <div class="experience-item">
+          <h3>Mobicules Technologies Ltd, Noida</h3>
+          <p><strong>Senior Software Engineer (Symfony)</strong> | October 2010 – December 2011</p>
+          <ul>
+            <li>Developed job recommendation engine for Adobe Systems - Facebook Application</li>
+            <li>Responsible for client interaction and requirement gathering</li>
+            <li>Wrote a content parser for Adobe Systems to parse the jobs posted on taleo.com and suggest them on Adobe
+              FB pages</li>
+          </ul>
+        </div>
 
-                <div class="experience-item">
-                    <h3>Allies Interactive Services Pvt. Ltd, Kanpur</h3>
-                    <p><strong>Web Developer</strong> | May 2009 – June 2010</p>
-                    <ul>
-                        <li>Technologies Used: PHP, Symfony, Amazon Web Services, Cloud Computing, Message Queuing, SOAP, LAMP Platform, FOSS Programming languages</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+        <div class="experience-item">
+          <h3>Allies Interactive Services Pvt. Ltd, Kanpur</h3>
+          <p><strong>Web Developer</strong> | May 2009 – June 2010</p>
+          <ul>
+            <li>Technologies Used: PHP, Symfony, Amazon Web Services, Cloud Computing, Message Queuing, SOAP, LAMP
+              Platform, FOSS Programming languages</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-        <section class="education">
-            <h2>Education</h2>
-            <p>MBA-IT, Software Process Management, Symbiosis International University, Pune</p>
-            <p>B.Tech., Mechanical, Uttar Pradesh Technical University, Lucknow</p>
-        </section>
-    </div>
+    <section class="education">
+      <h2>Education</h2>
+      <p>MBA-IT, Software Process Management, Symbiosis International University, Pune</p>
+      <p>B.Tech., Mechanical, Uttar Pradesh Technical University, Lucknow</p>
+    </section>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  
+<script>
+  window.addEventListener('load', function () {
+    // Fade in and slide down the container faster and more prominently
+    anime({
+      targets: '.container',
+      opacity: [0, 1],
+      translateY: [-50, 0],
+      duration: 20,
+      easing: 'easeOutQuad'
+    });
 
-    <script>
-        // Wait for the content to load
-        window.addEventListener('load', function() {
-            // Reveal the container with animation
-            document.querySelector('.container').style.opacity = 1;
-            document.querySelector('.container').style.transform = 'translateY(0)';
+    // Fade in and slide down the main heading faster
+    anime({
+      targets: 'h1',
+      opacity: [0, 1],
+      translateY: [-50, 0],
+      duration: 20,
+      easing: 'easeOutQuad',
+      delay: 20
+    });
 
-            // Reveal the header and sections with animation
-            document.querySelector('h1').style.opacity = 1;
-            document.querySelector('h1').style.transform = 'translateY(0)';
-            document.querySelectorAll('h2, .contact-info').forEach(function(element) {
-                element.style.opacity = 1;
-                element.style.transform = 'translateX(0)';
-            });
+    // Fade in and slide in the section headings and contact info with more speed
+    anime({
+      targets: 'h2, .contact-info',
+      opacity: [0, 1],
+      translateX: [-30, 0],
+      duration: 20,
+      easing: 'easeOutQuad',
+      delay: anime.stagger(150, {start: 600})
+    });
 
-            // Reveal the experience items and list items with staggered animation
-            document.querySelectorAll('p, li').forEach(function(element, index) {
-                setTimeout(function() {
-                    element.style.opacity = 1;
-                    element.style.transform = 'translateY(0)';
-                }, index * 100);
-            });
+    // Fade in and slide up each paragraph and list item faster
+    anime({
+      targets: 'p, li',
+      opacity: [0, 1],
+      translateY: [30, 0],
+      duration: 20,
+      easing: 'easeOutQuad',
+      delay: anime.stagger(70, {start: 800})
+    });
 
-            // Reveal bullet points with scale effect
-            document.querySelectorAll('ul li:before').forEach(function(element, index) {
-                setTimeout(function() {
-                    element.style.opacity = 1;
-                    element.style.transform = 'scale(1)';
-                }, index * 100 + 200);
-            });
+    // Fade in and slide up each experience item with a more pronounced bounce effect
+    anime({
+      targets: '.experience-item',
+      opacity: [0, 1],
+      translateY: [50, 0],
+      duration: 20,
+      easing: 'easeOutElastic(1, .8)',
+      delay: anime.stagger(120, {start: 900})
+    });
 
-            // Reveal experience items in the work experience section
-            document.querySelectorAll('.experience-item').forEach(function(element, index) {
-                setTimeout(function() {
-                    element.style.opacity = 1;
-                    element.style.transform = 'translateY(0)';
-                }, index * 150);
-            });
+    // Add a more pronounced rotation and scale effect on hover for experience items
+    document.querySelectorAll('.experience-item').forEach(function(item) {
+      item.addEventListener('mouseenter', function() {
+        anime({
+          targets: item,
+          scale: 1.1,
+          rotate: '1deg',
+          duration: 20,
+          easing: 'easeOutQuad'
         });
-    </script>
+      });
+      item.addEventListener('mouseleave', function() {
+        anime({
+          targets: item,
+          scale: 1,
+          rotate: '0deg',
+          duration: 20,
+          easing: 'easeOutQuad'
+        });
+      });
+    });
+  });
+</script>
+<script>
+  window.addEventListener('load', function () {
+    // Add background images to sections
+    document.querySelector('.summary').style.backgroundImage = 'none';
+    document.querySelector('.experience').style.backgroundImage = 'none';
+    document.querySelector('.work-experience').style.backgroundImage = 'none';
+    document.querySelector('.education').style.backgroundImage = 'none';
+
+    // Add opacity and blend mode to sections
+    document.querySelectorAll('section').forEach(function (section) {
+      section.style.transition = 'transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease';
+    });
+
+    // Add hover animation to sections
+    document.querySelectorAll('section').forEach(function (section) {
+      section.addEventListener('mouseenter', function () {
+        section.style.transform = 'scale(1.05) rotate(1deg)'; // Scale up and rotate slightly on hover
+        section.style.boxShadow = '0 12px 24px rgba(0, 0, 0, 0.3)'; // Add a stronger shadow on hover
+        section.style.backgroundColor = '#f7f7f7'; // Lighten the background color on hover
+      });
+      section.addEventListener('mouseleave', function () {
+        section.style.transform = 'scale(1) rotate(0deg)'; // Revert to original scale and rotation
+        section.style.boxShadow = '0 4px 10px rgba(0, 0, 0, 0.1)'; // Revert to original shadow
+        section.style.backgroundColor = ''; // Revert to original background color
+      });
+    });
+
+    // Add icons to the Objective section
+    const objectiveIcon = document.createElement('i');
+    objectiveIcon.className = 'fas fa-bullseye'; // Font Awesome icon class for bullseye
+    document.querySelector('.summary h2').prepend(objectiveIcon);
+
+    // Add icons to the Summary of Experience section
+    const experienceIcon = document.createElement('i');
+    experienceIcon.className = 'fas fa-briefcase'; // Font Awesome icon class for briefcase
+    document.querySelector('.experience h2').prepend(experienceIcon);
+
+    // Add icons to the Work Experience section
+    const workExperienceIcon = document.createElement('i');
+    workExperienceIcon.className = 'fas fa-tasks'; // Font Awesome icon class for tasks
+    document.querySelector('.work-experience h2').prepend(workExperienceIcon);
+
+    // Add icons to each job role in the Work Experience section
+    document.querySelectorAll('.work-experience h3').forEach(function (element) {
+      const jobIcon = document.createElement('i');
+      jobIcon.className = 'fas fa-briefcase'; // Font Awesome icon class for briefcase
+      element.prepend(jobIcon);
+    });
+
+    // Add icons to the Education section
+    const educationIcon = document.createElement('i');
+    educationIcon.className = 'fas fa-graduation-cap'; // Font Awesome icon class for graduation cap
+    document.querySelector('.education h2').prepend(educationIcon);
+
+    // Add hover animation to icons
+    document.querySelectorAll('i').forEach(function (icon) {
+      icon.style.transition = 'color 0.4s ease, transform 0.4s ease, text-shadow 0.4s ease';
+      icon.addEventListener('mouseenter', function () {
+        icon.style.color = '#e74c3c'; // Change color on hover
+        icon.style.transform = 'scale(1.3) rotate(-1deg)'; // Increase size and rotate on hover
+        icon.style.textShadow = '2px 2px 8px rgba(0, 0, 0, 0.2)'; // Add a shadow to the icon
+      });
+      icon.addEventListener('mouseleave', function () {
+        icon.style.color = ''; // Revert to original color
+        icon.style.transform = 'scale(1) rotate(0deg)'; // Revert to original size and rotation
+        icon.style.textShadow = ''; // Remove text shadow
+      });
+    });
+
+    // Add hover animation to links in contact info
+    document.querySelectorAll('.contact-info a').forEach(function (link) {
+      link.style.transition = 'color 0.4s ease, text-shadow 0.4s ease';
+      link.addEventListener('mouseenter', function () {
+        link.style.color = '#2980b9'; // Change link color on hover
+        link.style.textShadow = '2px 2px 8px rgba(0, 0, 0, 0.2)'; // Add shadow to text on hover
+      });
+      link.addEventListener('mouseleave', function () {
+        link.style.color = ''; // Revert to original color
+        link.style.textShadow = ''; // Remove text shadow
+      });
+    });
+  });
+</script>
+
+</script>
+
 </body>
+
 </html>
