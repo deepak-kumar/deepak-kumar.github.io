@@ -235,7 +235,7 @@
                 </div>
 
                 <div class="experience-item">
-                    <h3>Bubbleideas Semantic Inc, Noida</h3>
+                    <h3>Bubbleideas Semantic Inc, Noida</h></h3>
                     <p><strong>Tech Lead</strong> | January 2012 – February 2014</p>
                     <ul>
                         <li>Lead a team of 6 developers</li>
@@ -304,6 +304,14 @@
                     element.style.opacity = 1;
                     element.style.transform = 'scale(1)';
                 }, index * 100 + 200);
+            });
+
+            // Reveal experience items in the work experience section
+            document.querySelectorAll('.experience-item').forEach(function(element, index) {
+                setTimeout(function() {
+                    element.style.opacity = 1;
+                    element.style.transform = 'translateY(0)';
+                }, index * 150);
             });
         });
     </script>
