@@ -23,6 +23,9 @@
             padding: 20px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease, transform 1s ease;
         }
 
         h1, h2, h3 {
@@ -35,6 +38,9 @@
             text-align: center;
             margin-bottom: 10px;
             color: #3A3D98;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 1s ease 0.5s, transform 1s ease 0.5s;
         }
 
         h2 {
@@ -43,6 +49,10 @@
             border-left: 5px solid #E84545;
             padding-left: 10px;
             margin-bottom: 20px;
+            position: relative;
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: opacity 1s ease 0.8s, transform 1s ease 0.8s;
         }
 
         h3 {
@@ -55,6 +65,10 @@
         p, li {
             font-size: 1em;
             color: #333;
+            position: relative;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease 0.5s, transform 1s ease 0.5s;
         }
 
         ul {
@@ -76,11 +90,17 @@
             color: #E84545;
             font-size: 1.2em;
             line-height: 1.2em;
+            opacity: 0;
+            transform: scale(0);
+            transition: opacity 0.5s ease 0.6s, transform 0.5s ease 0.6s;
         }
 
         .contact-info {
             text-align: center;
             margin-bottom: 30px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease 0.6s, transform 1s ease 0.6s;
         }
 
         .contact-info a {
@@ -110,6 +130,15 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease 0.6s, transform 1s ease 0.6s;
+        }
+
+        .experience-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
 
         .education p {
@@ -245,5 +274,38 @@
             <p>B.Tech., Mechanical, Uttar Pradesh Technical University, Lucknow</p>
         </section>
     </div>
+
+    <script>
+        // Wait for the content to load
+        window.addEventListener('load', function() {
+            // Reveal the container with animation
+            document.querySelector('.container').style.opacity = 1;
+            document.querySelector('.container').style.transform = 'translateY(0)';
+
+            // Reveal the header and sections with animation
+            document.querySelector('h1').style.opacity = 1;
+            document.querySelector('h1').style.transform = 'translateY(0)';
+            document.querySelectorAll('h2, .contact-info').forEach(function(element) {
+                element.style.opacity = 1;
+                element.style.transform = 'translateX(0)';
+            });
+
+            // Reveal the experience items and list items with staggered animation
+            document.querySelectorAll('p, li').forEach(function(element, index) {
+                setTimeout(function() {
+                    element.style.opacity = 1;
+                    element.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+
+            // Reveal bullet points with scale effect
+            document.querySelectorAll('ul li:before').forEach(function(element, index) {
+                setTimeout(function() {
+                    element.style.opacity = 1;
+                    element.style.transform = 'scale(1)';
+                }, index * 100 + 200);
+            });
+        });
+    </script>
 </body>
 </html>
