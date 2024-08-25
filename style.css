@@ -7,7 +7,7 @@
 
 /* Global Styles */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     background: #F7F7F7;
     color: #2D2D2D;
     display: flex;
@@ -36,6 +36,7 @@ header {
 }
 
 header h1 {
+    font-family: 'Montserrat', sans-serif;
     font-size: 3em;
     color: #3A3D98;
     margin-bottom: 10px;
@@ -62,6 +63,7 @@ section {
 }
 
 h2 {
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.8em;
     color: #3A3D98;
     border-left: 5px solid #E84545;
@@ -90,6 +92,7 @@ h2 {
 }
 
 .experience-item h3 {
+    font-family: 'Montserrat', sans-serif;
     color: #3A3D98;
     margin-bottom: 10px;
 }
@@ -107,20 +110,6 @@ h2 {
 
 .experience-item ul li {
     margin-bottom: 8px;
-}
-
-/* Specific styling for Mobicules Technologies section */
-.experience-mobicules {
-    background: #E84545;
-    color: #ffffff;
-}
-
-.experience-mobicules h3 {
-    color: #ffffff;
-}
-
-.experience-mobicules ul {
-    color: #ffffff;
 }
 
 /* Hover Effects */
