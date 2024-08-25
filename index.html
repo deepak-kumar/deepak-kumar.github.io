@@ -45,8 +45,7 @@
 
         h2 {
             font-size: 1.8em;
-            color: #3A3D98;
-            border-left: 5px solid #E84545;
+            border-left: 5px solid;
             padding-left: 10px;
             margin-bottom: 20px;
             position: relative;
@@ -59,7 +58,6 @@
             font-size: 1.4em;
             margin-top: 20px;
             margin-bottom: 10px;
-            color: #3A3D98;
         }
 
         p, li {
@@ -87,7 +85,6 @@
             content: "•";
             position: absolute;
             left: 0;
-            color: #E84545;
             font-size: 1.2em;
             line-height: 1.2em;
             opacity: 0;
@@ -141,10 +138,70 @@
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
 
-        .education p {
-            margin-bottom: 5px;
+        /* Section-Specific Styles */
+        .summary {
+            background-color: #FFDDC1; /* Light Peach */
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 5px solid #FF9F1C; /* Peach */
         }
 
+        .summary h2 {
+            color: #FF9F1C;
+            border-color: #FF9F1C;
+        }
+
+        .summary ul li:before {
+            color: #FF9F1C;
+        }
+
+        .experience {
+            background-color: #C1FFD7; /* Light Mint */
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 5px solid #2EC4B6; /* Mint */
+        }
+
+        .experience h2 {
+            color: #2EC4B6;
+            border-color: #2EC4B6;
+        }
+
+        .experience ul li:before {
+            color: #2EC4B6;
+        }
+
+        .work-experience {
+            background-color: #FFD1DC; /* Light Pink */
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 5px solid #FF6B6B; /* Pink */
+        }
+
+        .work-experience h2 {
+            color: #FF6B6B;
+            border-color: #FF6B6B;
+        }
+
+        .work-experience ul li:before {
+            color: #FF6B6B;
+        }
+
+        .education {
+            background-color: #D1D1FF; /* Light Blue */
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 5px solid #3D5A80; /* Blue */
+        }
+
+        .education h2 {
+            color: #3D5A80;
+            border-color: #3D5A80;
+        }
+
+        .education p {
+            color: #333;
+        }
     </style>
 </head>
 <body>
@@ -235,7 +292,7 @@
                 </div>
 
                 <div class="experience-item">
-                    <h3>Bubbleideas Semantic Inc, Noida</h></h3>
+                    <h3>Bubbleideas Semantic Inc, Noida</h3>
                     <p><strong>Tech Lead</strong> | January 2012 – February 2014</p>
                     <ul>
                         <li>Lead a team of 6 developers</li>
